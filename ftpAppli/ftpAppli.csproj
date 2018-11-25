@@ -35,13 +35,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Programme.cs" />
+    <Compile Include="FromFTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromFTP.Designer.cs">
+      <DependentUpon>FromFTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="serveurFTP.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +56,14 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FromFTP.resx">
+      <DependentUpon>FromFTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
