@@ -14,6 +14,8 @@ namespace ftpAppli
     {
         private serveurFTP ftp;
 
+        internal serveurFTP Ftp { get => ftp; set => ftp = value; }
+
         public ConnexionFTP()
         {
             InitializeComponent();
@@ -26,8 +28,8 @@ namespace ftpAppli
                 MessageBox.Show("Tous les champs sont nécéssaire");
                 return;
             }
-            ftp = new serveurFTP(this.portValue.Text,this.hoteValue.Text,this.idValue.Text,this.mdpValue.Text);
-            
+            Ftp = new serveurFTP(this.portValue.Text,this.hoteValue.Text,this.idValue.Text,this.mdpValue.Text);
+            Close();
         }
 
         private bool CheckCas()

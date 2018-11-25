@@ -2,12 +2,12 @@
 
 namespace ftpAppli
 {
-    internal class serveurFTP
+    public class serveurFTP
     {
-        private int port;
-        private string hote;
-        private string identifiant;
-        private string mdp;
+        private readonly int port;
+        private readonly string hote;
+        private readonly string identifiant;
+        private readonly string mdp;
 
         public serveurFTP(int p,string h,string i,string m)
         {
@@ -23,6 +23,14 @@ namespace ftpAppli
             
         }
 
+       
 
+        public string Hote => hote;
+
+        public string Identifiant => identifiant;
+
+        public string Mdp => mdp;
+
+        public int Port => port;
     }
 }
